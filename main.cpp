@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdlib.h>
+#include <iomanip>
+#include "main.h"
 #include "Room.h"
 using namespace std;
 
@@ -27,6 +30,7 @@ int main() {
     cin >> option;
   
     switch(option) {
+      case -1:
       case 0: 
         break;
       case 1:
@@ -38,10 +42,10 @@ int main() {
       case 4:
         break;
       case 5:
-        cout << "";
+        display5();
         break;
       case 6:
-        cout << "";
+        display6();
         break;
       case 7:
         break;
@@ -110,10 +114,31 @@ void display4(){
 
 }
 void display5(){
+  // Guest Profile Information
+  cout << "\nGuest Profile Information\n\n";
+  cout << "First Name: Evan             Last Name:              Delasota\n";
+  cout << "Phone:      1234567890       Email:                  evan-d@email.com\n";
+  cout << "ID Info:    (CA, 971hv4c7)   Vehicle License Plate:  12h57hd\n\n";
+  
+  cout << "Press Enter to continue\n";
+  fgetc(stdin);
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 }
 void display6(){
-
+  // Guest Room Stay Information
+  char loop = 'a';
+  cout << "\nGuest Stay Information\n\n";
+  cout << "Guest Name: Evan Delasota\n";
+  cout << "Check in:  10/12/21          Check in time:            1:00pm\n";
+  cout << "Check out: 10/30/21          Expected Check out time:  11:00am\n";
+  cout << "Room Type: Double Queen      Room Number:              69\n";
+  cout << "Room Rate: $300.45/Night     Total Charge:             $5408.1\n";
+  cout << "Payments Made: 3             Balance:                  $4506.75\n\n";
+  
+  cout << "Press Enter to continue\n";
+  fgetc(stdin);
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 void display7(){
 
